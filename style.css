@@ -33,7 +33,7 @@ hr{
     width: 100%;
     max-width: 1230px;
     padding: 0 15px;
-    margin: 0 auto  ;
+    margin: 0 auto;
 }
 /* Intro */
 .intro{
@@ -127,7 +127,7 @@ hr{
     display: inline-block;
     vertical-align: top;
     color: #fff;
-    margin: 0 15px  ;
+    margin: 0 15px;
     text-decoration: none;
     transition: color 0.1s linear;
     position: relative;
