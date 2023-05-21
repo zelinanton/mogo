@@ -1,14 +1,14 @@
 $(function() {
 
-    var header = $("#header"),// селектор элемента header.
-        introH = $("#intro").innerHeight(),//высота блока Intro.
-        scrollOffset = $(window).scrollTop();//проскроленное расстояние. Текущий скрол
+    var header = $("#header"),
+        introH = $("#intro").innerHeight(),
+        scrollOffset = $(window).scrollTop();
 
     /* Fixed Headers */    
     checkScroll(scrollOffset);
 
     $(window).on("scroll", function() {
-        scrollOffset = $(this).scrollTop();//обновление значения
+        scrollOffset = $(this).scrollTop();
 
         checkScroll(scrollOffset);
 
@@ -28,9 +28,9 @@ $(function() {
     $("[data-scroll]").on("click", function(event){
         event.preventDefault();
 
-        var $this = $(this),//значение нажатой ссылки
+        var $this = $(this),
             blockId = $(this).data('scroll'),
-            blockOffset = $(blockId).offset().top;//позиция элемента от верха страницы
+            blockOffset = $(blockId).offset().top;
 
         $("nav a").removeClass("active");
         $this.addClass("active");
@@ -42,17 +42,17 @@ $(function() {
 
     /* Menu nav toggle */
     $("#nav_toggle").on("click", function(event){
-        event.preventDefault();//убираем стандартное поведение кнопки
+        event.preventDefault();
 
         $(this).toggleClass("active");
-        $("#nav").toggleClass("active");//добавляет в селектор nav класс active
+        $("#nav").toggleClass("active");
     });
 
     /* Collapse */
     $("[data-collapse]").on("click", function(event){
         event.preventDefault();
 
-        var $this = $(this),//значение нажатой ссылки
+        var $this = $(this),
             blockId = $(this).data('collapse');
 
         $this.toggleClass("active");
